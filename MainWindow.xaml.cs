@@ -14,7 +14,7 @@ namespace EmptyWPFwithScroll
         {
             InitializeComponent();
 
-            Anzeige( "Init ... ok" );
+            Display( "Init ... ok" );
 
         }   // end: public MainWindow
 
@@ -26,10 +26,11 @@ namespace EmptyWPFwithScroll
         private void Window_Closing( object sender, System.ComponentModel.CancelEventArgs e )
         {
 
-        }
+        }   // end: private void Window_Closing
 
         /// <summary>
         /// handlerfunction -> MenuItem
+        /// used for exitroutines
         /// </summary>
         /// <param name="sender">triggering UI-element</param>
         /// <param name="e">send parameter from it</param>
@@ -37,21 +38,25 @@ namespace EmptyWPFwithScroll
         {
             this.Close();
 
-        }   // Ende: MenuQuit_Click
+        }   // end: MenuQuit_Click
+
+
+
+        // ---------------------------------------------     helperfunctions
 
         /// <summary>
-        /// helperfunction, writng arraydata into a string
+        /// helperfunction, writing arraydata into a string
         /// </summary>
         /// <param name="data">2d ragged array </param>
         /// <returns>the data as string</returns>
-        public string ArrayToString( double[][] data, bool umbruch = false )
+        public string ArrayToString( double[][] data, bool textWrap = false )
         {
             string text = "";
 
             foreach ( double[] dat in data )
             {
                 text += $" [ {string.Join( ", ", dat )} ] ";
-                if ( umbruch )
+                if ( textWrap )
                     text += "\n";
 
             }
@@ -61,29 +66,27 @@ namespace EmptyWPFwithScroll
         }   // end: ArrayToString
 
         /// <summary>
-        /// Hilfsfunktion, die den übergebenen Text in die 
-        /// Textausgabe schreibt.
+        /// helperfunction to write the text into the mainwindow
         /// </summary>
-        /// <param name="text">Eingabestring</param>
-        public void Anzeige( string? text )
+        /// <param name="text">inputstring</param>
+        public void Display( string? text )
         {
             if ( !string.IsNullOrEmpty( text ) )
                 textBlock.Text += text + "\n";
             textScroll.ScrollToBottom();
 
-        }   // Ende: Anzeige
+        }   // end: Display
 
         /// <summary>
-        /// Hilfsfunktion, die den übergebenen Text in die 
-        /// Textausgabe schreibt.
+        /// helperfunction to write the text into the mainwindow
         /// </summary>
-        /// <param name="text">Any-Objekt-Variante</param>
-        private void Anzeige( int obj )
+        /// <param name="text">any-objekt-variant</param>
+        private void Display( int obj )
         {
-            Anzeige( obj.ToString() );
+            Display( obj.ToString() );
 
-        }   // Ende: Anzeige
+        }   // end: Display
 
-    }   // Ende: class MainWindow
+    }   // end: class MainWindow
 
-}   // Ende: namespace EmptyWPFwithScroll
+}   // end: namespace EmptyWPFwithScroll
