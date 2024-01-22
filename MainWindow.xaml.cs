@@ -3,12 +3,12 @@
 namespace EmptyWPFwithScroll
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// interaction logic for MainWindow.xaml
     /// </summary>
     public partial class MainWindow : Window
     {
         /// <summary>
-        /// Standardkonstruktor
+        /// standardconstructor
         /// </summary>
         public MainWindow( )
         {
@@ -16,23 +16,23 @@ namespace EmptyWPFwithScroll
 
             Anzeige( "Init ... ok" );
 
-        }
+        }   // end: public MainWindow
 
         /// <summary>
-        /// Handlerfunktion -> Window_Closing
+        /// handlerfunction -> Window_Closing
         /// </summary>
-        /// <param name="sender">auslösendes Oberflächenelement</param>
-        /// <param name="e">Übergabeparameter davon</param>
+        /// <param name="sender">triggering UI-element</param>
+        /// <param name="e">send parameter from it</param>
         private void Window_Closing( object sender, System.ComponentModel.CancelEventArgs e )
         {
 
         }
 
         /// <summary>
-        /// Handlerfunktion -> MenuItem
+        /// handlerfunction -> MenuItem
         /// </summary>
-        /// <param name="sender">auslösendes Oberflächenelement</param>
-        /// <param name="e">Übergabeparameter davon</param>
+        /// <param name="sender">triggering UI-element</param>
+        /// <param name="e">send parameter from it</param>
         private void MenuQuit_Click( object sender, RoutedEventArgs e )
         {
             this.Close();
@@ -40,10 +40,10 @@ namespace EmptyWPFwithScroll
         }   // Ende: MenuQuit_Click
 
         /// <summary>
-        /// Hilfsfunktion, die die Datenfelder in einen String schreibt.
+        /// helperfunction, writng arraydata into a string
         /// </summary>
-        /// <param name="data"></param>
-        /// <returns>Die Daten als String</returns>
+        /// <param name="data">2d ragged array </param>
+        /// <returns>the data as string</returns>
         public string ArrayToString( double[][] data, bool umbruch = false )
         {
             string text = "";
@@ -58,7 +58,7 @@ namespace EmptyWPFwithScroll
             text += "\n";
             return ( text );
 
-        }   // Ende: ArrayToString
+        }   // end: ArrayToString
 
         /// <summary>
         /// Hilfsfunktion, die den übergebenen Text in die 
