@@ -15,6 +15,9 @@
    limitations under the License.
 ==================================================================== */
 
+
+// Ignore Spelling: Fwith
+
 using System.Windows;
 
 namespace EmptyWPFwithScroll
@@ -25,7 +28,12 @@ namespace EmptyWPFwithScroll
     public partial class MainWindow : Window
     {
         /// <summary>
-        /// standardconstructor
+        /// created on: 22.01.24
+        /// last edit: 15.10.24
+        /// </summary>
+        Version version = new Version( "1.0.3" );
+        /// <summary>
+        /// standard constructor
         /// </summary>
         public MainWindow( )
         {
@@ -36,7 +44,7 @@ namespace EmptyWPFwithScroll
         }   // end: public MainWindow
 
         /// <summary>
-        /// handlerfunction -> Window_Closing
+        /// handler function -> Window_Closing
         /// </summary>
         /// <param name="sender">triggering UI-element</param>
         /// <param name="e">send parameter from it</param>
@@ -46,8 +54,8 @@ namespace EmptyWPFwithScroll
         }   // end: private void Window_Closing
 
         /// <summary>
-        /// handlerfunction -> MenuItem
-        /// used for exitroutines
+        /// handler function -> MenuItem
+        /// used for exit routines
         /// </summary>
         /// <param name="sender">triggering UI-element</param>
         /// <param name="e">send parameter from it</param>
@@ -59,10 +67,10 @@ namespace EmptyWPFwithScroll
 
 
 
-        // ---------------------------------------------     helperfunctions
+        // ---------------------------------------------     helper functions
 
         /// <summary>
-        /// helperfunction, writing arraydata into a string
+        /// helper function, writing array data into a string
         /// </summary>
         /// <param name="data">2d ragged array </param>
         /// <returns>the data as string</returns>
@@ -83,9 +91,9 @@ namespace EmptyWPFwithScroll
         }   // end: ArrayToString
 
         /// <summary>
-        /// helperfunction to write the text into the mainwindow
+        /// helper function to write the text into the main window
         /// </summary>
-        /// <param name="text">inputstring</param>
+        /// <param name="text">input string</param>
         public void Display( string? text )
         {
             if ( !string.IsNullOrEmpty( text ) )
@@ -95,9 +103,9 @@ namespace EmptyWPFwithScroll
         }   // end: Display
 
         /// <summary>
-        /// helperfunction to write the text into the mainwindow
+        /// helper function to write the text into the main window
         /// </summary>
-        /// <param name="text">any-objekt-variant</param>
+        /// <param name="text">any-object-variant</param>
         private void Display( int obj )
         {
             Display( obj.ToString() );
